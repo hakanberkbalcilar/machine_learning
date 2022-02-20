@@ -14,7 +14,7 @@ def start():
         runSingleSelectionGame()
     elif(result == '2'):
         runDoubleSelectionGame()
-    elif(result == 'q'): return
+    elif(result == '0'): return
     else:
         print('\nInvalid value!')
         start()
