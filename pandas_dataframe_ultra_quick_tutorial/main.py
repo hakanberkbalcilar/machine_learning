@@ -41,6 +41,7 @@ tags = ['Eleanor', 'Chidi', 'Tahani', 'Jason'] # We Create a list of given colum
 
 randomData = np.random.randint(low=0, high=101, size=(3, 4)) # We create a list from random values which has 3x4 dimension
 
+
 dataFrame = pd.DataFrame(data=randomData, columns=tags) # We define our dataframe
 
 print(dataFrame)
