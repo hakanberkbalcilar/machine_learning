@@ -1,6 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import confusion_matrix
+
 
 data = pd.read_csv("decision_tree\data.csv")
 
@@ -29,19 +33,16 @@ x = (x_data - np.min(x_data))/(np.max(x_data)-np.min(x_data))
 
 
 # train test split
-from sklearn.model_selection import train_test_split
 x_train, x_test,y_train, y_test = train_test_split(x,y,test_size = 0.15,random_state = 42)
 
 
-from sklearn.tree import DecisionTreeClassifier
 dt = DecisionTreeClassifier()
 dt.fit(x_train,y_train)
 
 print("Score: ", dt.score(x_test, y_test))
 
 y_pred = dt.predict(x_test)  
-y_pred
+print(y_pred)
 
 # Making the Confusion Matrix
-from sklearn.metrics import confusion_matrix
 confusion_matrix(y_test, y_pred)
