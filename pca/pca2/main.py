@@ -11,7 +11,7 @@ df = pd.read_csv(url, names=['sepal length','sepal width','petal length','petal 
 
 df.head()
 
-# This code not working correctly. Search for it
+# This code not working correctly and can't see the window. Search for it
 features = ['sepal length', 'sepal width', 'petal length', 'petal width']
 x = df.loc[:, features].values
 
